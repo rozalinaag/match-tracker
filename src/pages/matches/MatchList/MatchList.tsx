@@ -1,4 +1,4 @@
-import { Score, TeamName } from '../../../components';
+import { Card, Score, TeamName } from '../../../components';
 import { ApiResponse } from '../../../types/matches';
 
 type Props = {
@@ -15,7 +15,7 @@ export function MatchList({ data, isLoading, error }: Props) {
     <div>
       {data?.data.matches.map((match, index) => (
         <div key={index}>
-          <div>
+          <Card>
             <TeamName>{match.homeTeam.name}</TeamName>
 
             <Score
@@ -25,7 +25,7 @@ export function MatchList({ data, isLoading, error }: Props) {
             />
 
             <TeamName isRight={true}>{match.awayTeam.name}</TeamName>
-          </div>
+          </Card>
         </div>
       ))}
     </div>

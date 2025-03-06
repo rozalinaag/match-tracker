@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #0f1318, #0a0e12, #1c232a);
+  background-size: 300% 300%;
+  animation: gradientAnimation 4s infinite;
+  padding: 16px 36px;
+  border-radius: 4px;
+}
+
+.wrapper:hover {
+  background: linear-gradient(90deg, #0b0f13, #0f1318, #0a0e12);
+  cursor: pointer;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

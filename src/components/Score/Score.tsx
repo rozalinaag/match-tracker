@@ -1,5 +1,6 @@
 import { StatusCard } from '..';
 import { MatchStatus } from '../../types/matches';
+import css from './styles.module.css';
 
 type Props = {
   leftTeam: number;
@@ -9,7 +10,7 @@ type Props = {
 
 export function Score({ leftTeam, rightTeam, status }: Props) {
   return (
-    <div>
+    <div className={css.wrapper}>
       <div>{`${leftTeam} : ${rightTeam}`}</div>
       <StatusCard status={status} />
     </div>
