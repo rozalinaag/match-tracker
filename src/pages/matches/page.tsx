@@ -3,7 +3,7 @@ import Header from './Header/Header';
 import MatchList from './MatchList/MatchList';
 
 export function MatchesPage() {
-  const { data, isLoading, error, refetch } = useMatches();
+  const { data, isLoading, error, refetch, isFetching } = useMatches();
 
   const handleUpdateClick = () => {
     refetch();
@@ -11,7 +11,11 @@ export function MatchesPage() {
 
   return (
     <div>
-      <Header error={error} handleUpdateClick={handleUpdateClick} />
+      <Header
+        isPending={isFetching}
+        error={error}
+        handleUpdateClick={handleUpdateClick}
+      />
       <MatchList data={data} isLoading={isLoading} error={error} />
     </div>
   );

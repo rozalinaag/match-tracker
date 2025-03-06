@@ -8,7 +8,7 @@ export const matchesData: {
       time: "2025-03-01T12:00:00Z",
       title: "Quarter Finals",
       homeTeam: {
-        name: "Very big team",
+        name: "Team ",
         players: [
           { username: "StrikeMaster", kills: 6 },
           { username: "ShadowFury", kills: 4 }
