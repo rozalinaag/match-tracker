@@ -1,0 +1,8 @@
+.wrapper {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  font: 'inter';
+}

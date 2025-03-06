@@ -1,3 +1,4 @@
+import { Score, TeamName } from '../../../components';
 import { ApiResponse } from '../../../types/matches';
 
 type Props = {
@@ -12,18 +13,21 @@ export function MatchList({ data, isLoading, error }: Props) {
 
   return (
     <div>
-      <h2>Match List</h2>
-      <ul>
-        {data?.data.matches.map((match, index) => (
-          <li key={index}>
-            <strong>{match.title}</strong> - {match.status} <br />
-            <span>
-              {match.homeTeam.name} ({match.homeScore}) vs.{' '}
-              {match.awayTeam.name} ({match.awayScore})
-            </span>
-          </li>
-        ))}
-      </ul>
+      {data?.data.matches.map((match, index) => (
+        <div key={index}>
+          <div>
+            <TeamName>{match.homeTeam.name}</TeamName>
+
+            <Score
+              leftTeam={match.homeScore}
+              rightTeam={match.awayScore}
+              status={match.status}
+            />
+
+            <TeamName isRight={true}>{match.awayTeam.name}</TeamName>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
