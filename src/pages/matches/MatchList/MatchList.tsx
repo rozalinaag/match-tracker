@@ -1,5 +1,6 @@
 import { Card, Score, TeamName } from '../../../components';
 import { ApiResponse } from '../../../types/matches';
+import css from './styles.module.css';
 
 type Props = {
   data?: ApiResponse;
@@ -12,21 +13,19 @@ export function MatchList({ data, isLoading, error }: Props) {
   if (error) return <p>Failed to load matches</p>;
 
   return (
-    <div>
+    <div className={css.wrapper}>
       {data?.data.matches.map((match, index) => (
-        <div key={index}>
-          <Card>
-            <TeamName>{match.homeTeam.name}</TeamName>
+        <Card key={index}>
+          <TeamName>{match.homeTeam.name}</TeamName>
 
-            <Score
-              leftTeam={match.homeScore}
-              rightTeam={match.awayScore}
-              status={match.status}
-            />
+          <Score
+            leftTeam={match.homeScore}
+            rightTeam={match.awayScore}
+            status={match.status}
+          />
 
-            <TeamName isRight={true}>{match.awayTeam.name}</TeamName>
-          </Card>
-        </div>
+          <TeamName isRight={true}>{match.awayTeam.name}</TeamName>
+        </Card>
       ))}
     </div>
   );

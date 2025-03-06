@@ -4,5 +4,15 @@
   align-items: center;
   font-weight: 600;
   font-size: 16px;
-  font: 'inter';
+  width: 200px;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

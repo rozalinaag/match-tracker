@@ -5,12 +5,6 @@
   margin-bottom: 20px;
 }
 
-.title {
-  font-weight: 400;
-  font-style: italic;
-  font-size: 32px;
-}
-
 .leftSide {
   display: flex;
   align-items: center;

@@ -8,7 +8,7 @@ export const matchesData: {
       time: "2025-03-01T12:00:00Z",
       title: "Quarter Finals",
       homeTeam: {
-        name: "Team Thunder",
+        name: "Very big team",
         players: [
           { username: "StrikeMaster", kills: 6 },
           { username: "ShadowFury", kills: 4 }
@@ -56,7 +56,7 @@ export const matchesData: {
       },
       homeScore: 5,
       awayScore: 3,
-      status: "Finished"
+      status: "Live"
     },
     {
       time: "2025-03-03T15:30:00Z",
@@ -83,7 +83,7 @@ export const matchesData: {
       },
       homeScore: 3,
       awayScore: 2,
-      status: "Finished"
+      status: "Live"
     },
     {
       time: "2025-03-04T16:00:00Z",
@@ -137,7 +137,7 @@ export const matchesData: {
       },
       homeScore: 6,
       awayScore: 4,
-      status: "Finished"
+      status: "Match preparing"
     },
     {
       time: "2025-03-06T18:45:00Z",
@@ -191,7 +191,7 @@ export const matchesData: {
       },
       homeScore: 7,
       awayScore: 5,
-      status: "Finished"
+      status: "Live"
     },
     {
       time: "2025-03-08T20:15:00Z",
@@ -218,7 +218,7 @@ export const matchesData: {
       },
       homeScore: 3,
       awayScore: 4,
-      status: "Finished"
+      status: "Live"
     },
     {
       time: "2025-03-09T21:30:00Z",
@@ -245,7 +245,7 @@ export const matchesData: {
       },
       homeScore: 5,
       awayScore: 3,
-      status: "Finished"
-    }
+      status: "Match preparing"
+    },
   ]
 }

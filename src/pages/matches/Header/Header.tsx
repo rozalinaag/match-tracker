@@ -1,20 +1,22 @@
 import { Button, ErrorMessage } from '../../../components';
 import css from './styles.module.css';
+import logo from './logo.svg';
 
 type Props = {
-  isError: boolean;
+  error: Error | null;
+  handleUpdateClick: () => void;
 };
 
-export default function Header({ isError }: Props) {
+export default function Header({ error, handleUpdateClick }: Props) {
   return (
     <div className={css.wrapper}>
-      <div className={css.title}>Match Tracker</div>
+      <img src={logo} alt="logo" />
 
       <div className={css.leftSide}>
-        {isError && (
+        {error && (
           <ErrorMessage>Ошибка: не удалось загрузить информацию</ErrorMessage>
         )}
-        <Button>Обновить</Button>
+        <Button handleClick={handleUpdateClick}>Обновить</Button>
       </div>
     </div>
   );

@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #0f1318, #0a0e12, #1c232a);
+  background: linear-gradient(90deg, #0f1318, #0a0e12, #121920, #0f1318);
   background-size: 300% 300%;
-  animation: gradientAnimation 4s infinite;
+  animation: gradientAnimation 5s infinite;
   padding: 16px 36px;
   border-radius: 4px;
 }
