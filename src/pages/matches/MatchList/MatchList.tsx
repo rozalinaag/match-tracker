@@ -9,8 +9,8 @@ type Props = {
 };
 
 export function MatchList({ data, isLoading, error }: Props) {
-  if (isLoading) return <p>Loading matches...</p>;
-  if (error) return <p>Failed to load matches</p>;
+  if (isLoading) return <p>Загружаем матчи...</p>;
+  if (error) return <p>Ошибка при загрузке данных</p>;
 
   return (
     <div className={css.wrapper}>
