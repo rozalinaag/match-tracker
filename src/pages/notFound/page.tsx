@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function NotFoundPage() {
-  return <div>Page not found</div>;
+  return <div>Страница не найдена. Проверьте URL</div>;
 }
