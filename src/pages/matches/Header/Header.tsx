@@ -5,10 +5,14 @@ import logo from './logo.svg';
 type Props = {
   error: Error | null;
   handleUpdateClick: () => void;
-  isPending: boolean;
+  isFetching: boolean;
 };
 
-export default function Header({ error, handleUpdateClick, isPending }: Props) {
+export default function Header({
+  error,
+  handleUpdateClick,
+  isFetching,
+}: Props) {
   return (
     <div className={css.wrapper}>
       <img src={logo} alt="logo" />
@@ -17,7 +21,7 @@ export default function Header({ error, handleUpdateClick, isPending }: Props) {
         {error && (
           <ErrorMessage>Ошибка: не удалось загрузить информацию</ErrorMessage>
         )}
-        <Button handleClick={handleUpdateClick} isPending={isPending}>
+        <Button handleClick={handleUpdateClick} isFetching={isFetching}>
           Обновить
         </Button>
       </div>

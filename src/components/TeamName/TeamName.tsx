@@ -9,12 +9,10 @@ type Props = {
 };
 
 export function TeamName({ children, isRight }: Props) {
-  const imgTeam = <img src={label} alt="team" />;
-
   return (
     <div className={clsx(css.wrapper, isRight && css.right)}>
-      {!isRight && imgTeam} <div className={css.text}>{children}</div>{' '}
-      {isRight && imgTeam}
+      <img src={label} alt="team" />
+      <div className={css.text}>{children}</div>
     </div>
   );
 }

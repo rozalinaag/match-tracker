@@ -14,19 +14,23 @@ export function MatchList({ data, isLoading, error }: Props) {
 
   return (
     <div className={css.wrapper}>
-      {data?.data.matches.map((match, index) => (
-        <Card key={index}>
-          <TeamName>{match.homeTeam.name}</TeamName>
+      {data?.data.matches.map(
+        ({ homeScore, homeTeam, status, awayTeam, awayScore }, index) => (
+          <Card key={index}>
+            <TeamName>{homeTeam.name}</TeamName>
 
-          <Score
-            leftTeam={match.homeScore}
-            rightTeam={match.awayScore}
-            status={match.status}
-          />
+            <Score
+              leftTeamScore={homeScore}
+              rightTeamScore={awayScore}
+              status={status}
+            />
 
-          <TeamName isRight={true}>{match.awayTeam.name}</TeamName>
-        </Card>
-      ))}
+            <TeamName isRight={true}>{awayTeam.name}</TeamName>
+          </Card>
+        )
+      )}
+
+      {!data?.data.matches.length && <div>Нет данных</div>}
     </div>
   );
 }

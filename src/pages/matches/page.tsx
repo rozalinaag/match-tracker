@@ -12,7 +12,7 @@ export function MatchesPage() {
   return (
     <div>
       <Header
-        isPending={isFetching}
+        isFetching={isFetching}
         error={error}
         handleUpdateClick={handleUpdateClick}
       />
